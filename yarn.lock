@@ -11538,7 +11538,7 @@ react-day-picker@^8.7.1:
   resolved "https://registry.npmjs.org/react-day-picker/-/react-day-picker-8.10.0.tgz"
   integrity sha512-mz+qeyrOM7++1NCb1ARXmkjMkzWVh2GL9YiPbRjKe0zHccvekk4HE+0MPOZOrosn8r8zTHIIeOUXTmXRqmkRmg==
 
-react-dev-utils@10.0.0, react-dev-utils@^12.0.1:
+react-dev-utils@10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.0.0.tgz#bd2d16426c7e4cbfed1b46fb9e2ac98ec06fcdfa"
   integrity sha512-8OKSJvl8ccXJDNf0YGw377L9v1OnT16skD/EuZWm0M/yr255etP4x4kuUCT1EfFfJ7Rhc4ZTpPTfPrvgiXa50Q==
@@ -11567,6 +11567,36 @@ react-dev-utils@10.0.0, react-dev-utils@^12.0.1:
     shell-quote "1.7.2"
     strip-ansi "5.2.0"
     text-table "0.2.0"
+
+react-dev-utils@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-12.0.1.tgz#ba92edb4a1f379bd46ccd6bcd4e7bc398df33e73"
+  integrity sha512-84Ivxmr17KjUupyqzFode6xKhjwuEJDROWKJy/BthkL7Wn6NJ8h4WE6k/exAv6ImS+0oZLRRW5j/aINMHyeGeQ==
+  dependencies:
+    "@babel/code-frame" "^7.16.0"
+    address "^1.1.2"
+    browserslist "^4.18.1"
+    chalk "^4.1.2"
+    cross-spawn "^7.0.3"
+    detect-port-alt "^1.1.6"
+    escape-string-regexp "^4.0.0"
+    filesize "^8.0.6"
+    find-up "^5.0.0"
+    fork-ts-checker-webpack-plugin "^6.5.0"
+    global-modules "^2.0.0"
+    globby "^11.0.4"
+    gzip-size "^6.0.0"
+    immer "^9.0.7"
+    is-root "^2.1.0"
+    loader-utils "^3.2.0"
+    open "^8.4.0"
+    pkg-up "^3.1.0"
+    prompts "^2.4.2"
+    react-error-overlay "^6.0.11"
+    recursive-readdir "^2.2.2"
+    shell-quote "^1.7.3"
+    strip-ansi "^6.0.1"
+    text-table "^0.2.0"
 
 react-dnd-html5-backend@^16.0.1:
   version "16.0.1"

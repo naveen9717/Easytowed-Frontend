@@ -3,9 +3,9 @@ import DataTable from 'react-data-table-component';
 import { Btn, H4,Image,Badges } from '../../../../AbstractElements';
 import { dummytabledata, tableColumns } from '../../../../Data/Table/Defaultdata';
 import axios from "axios";
+import { Link } from 'react-router-dom';
 import { Media } from 'reactstrap';
 import user1 from '../../../../assets/images/user/1.jpg';
-import { Mail, DollarSign, Headphones, Link, GitHub, Award, Activity, Heart } from 'react-feather';
 import { toast } from 'react-toastify';
 
 const DataTableComponent = () => {
@@ -97,7 +97,7 @@ const DataTableComponent = () => {
         {
             name: 'Actions',
             selector: row => <div className="d-flex">
-                <a href={`/venues/profile/${row.id}/`} title='Edit'><Badges attrBadge={{ color: 'primary' }} >Edit</Badges></a>&nbsp;
+                <Link to={`/venues/profile/${row.id}/`} title='Edit'><Badges attrBadge={{ color: 'primary' }} >Edit</Badges></Link>&nbsp;
                 <Badges attrBadge={{ color: 'secondary', onClick: () => DeleteRow(row.id) }}>Delete</Badges>
             </div>,
             sortable: true,

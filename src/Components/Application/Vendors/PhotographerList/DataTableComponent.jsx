@@ -20,14 +20,14 @@ const DataTableComponent = () => {
 
     const DeleteRow = (id) => {
         console.log('selectedRows',id)
-        axios.delete(`${process.env.REACT_APP_NODE_BACKEND_URL}api/photographers/delete/${id}`).then((response) => {
+        axios.delete(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/photographers/delete/${id}`).then((response) => {
             console.log('response',response)
             toast.success(response.data);
           });
     };
 
     React.useEffect(() => {
-        axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}api/photographers/findall`).then((response) => {
+        axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/photographers/findall`).then((response) => {
           setmockDataTeam(Object.values(response.data));
         });
       }, [mockDataTeam]);

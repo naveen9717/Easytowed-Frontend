@@ -31,7 +31,7 @@ const UsersEditContain = () => {
 
 // console.log('userId',userId)
   const getUserFromApi = async() => {
-    await axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}api/users/find/${currentUser.id}`)
+    await axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/users/find/${currentUser.id}`)
     .catch(err => console.log(err))
     .then(resp => {
       setmockDataTeam(resp.data)
@@ -46,7 +46,7 @@ const UsersEditContain = () => {
     
       // project.addNewProject(data);
       console.log('updatedata',data)
-          axios.put(`${process.env.REACT_APP_NODE_BACKEND_URL}api/users/update/${currentUser.id}`, data).then((response) => {
+          axios.put(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/users/update/${currentUser.id}`, data).then((response) => {
             console.log('response',response)
             toast.success(response.data);
           });

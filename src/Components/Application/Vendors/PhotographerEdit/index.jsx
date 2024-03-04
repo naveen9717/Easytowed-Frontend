@@ -38,7 +38,7 @@ const VenuesEdit = () => {
   }
 
   const getVenueFromApi = async() => {
-    await axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}api/photographers/profile/${userId}`)
+    await axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/photographers/profile/${userId}`)
     .catch(err => console.log(err))
     .then(resp => {
       setmockDataTeam(resp.data)
@@ -99,7 +99,7 @@ const VenuesEdit = () => {
       console.log('update-data',data)
       // project.addNewProject(data);
       // console.log('updatedata',data)
-          axios.put(`${process.env.REACT_APP_NODE_BACKEND_URL}api/venues/update/${userId}`, data).then((response) => {
+          axios.put(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/venues/update/${userId}`, data).then((response) => {
             console.log('response',response)
             toast.success(response.data);
           });

@@ -86,7 +86,7 @@ const AddPhotographer = () => {
       console.log('final-data',data)
       // project.addNewProject(data);
       // console.log('updatedata',data)
-          axios.post(`${process.env.REACT_APP_NODE_BACKEND_URL}api/photographers/register`, data).then((response) => {
+          axios.post(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/photographers/register`, data).then((response) => {
             console.log('response',response)
             toast.success(response.data);
           });

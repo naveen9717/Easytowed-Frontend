@@ -21,7 +21,7 @@ const DataTableComponent = () => {
 
     const DeleteRow = (id) => {
         console.log('selectedRows',id)
-        axios.delete(`${process.env.REACT_APP_NODE_BACKEND_URL}api/venues/delete/${id}`).then((response) => {
+        axios.delete(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/venues/delete/${id}`).then((response) => {
             console.log('response',response)
             toast.success(response.data);
           });
@@ -29,7 +29,7 @@ const DataTableComponent = () => {
 
 
     React.useEffect(() => {
-        axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}api/venues/findall`).then((response) => {
+        axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/venues/findall`).then((response) => {
           setmockDataTeam(Object.values(response.data));
         });
       }, [mockDataTeam]);

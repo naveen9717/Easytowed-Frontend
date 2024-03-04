@@ -10,7 +10,7 @@ export const AuthContextProvider = ({ children }) => {
 
   const login = async (input) => {
     const res = await axios.post(
-      `${process.env.REACT_APP_NODE_BACKEND_URL}api/auth/login`,
+      `${process.env.REACT_APP_NODE_BACKEND_URL}/api/auth/login`,
       input,
       {
         withCredentials: true,

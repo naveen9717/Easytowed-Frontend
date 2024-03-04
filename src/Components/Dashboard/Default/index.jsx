@@ -21,8 +21,6 @@ const Dashboard = () => {
         <Row className="widget-grid">
           <GreetingCard />
           <WidgetsWrapper />
-          <OverallBalance />
-          <RecentOrders />
           <ActivityCard />
           <RecentSales />
           <TimelineCard />

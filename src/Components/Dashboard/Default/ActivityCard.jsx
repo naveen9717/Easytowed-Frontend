@@ -1,13 +1,16 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import { Card, CardBody, CardHeader, Col } from 'reactstrap';
 import { H5, H6, UL, LI, P } from '../../../AbstractElements';
 import { Activity, DailyDropdown } from '../../../Constant';
 import { ActivityData } from '../../../Data/DefaultDashboard';
 import DropdownCommon from '../../Common/Dropdown';
+import axios from "axios";
 
-const ActivityCard = () => {
+const ActivityCard = ({data}) => {
+
+
   return (
-    <Col xxl='4' xl='5' md='6' sm='7' className='notification box-col-6'>
+    <Col xxl='6' xl='5' md='6' sm='7' className='notification box-col-6'>
       <Card className='height-equal'>
         <CardHeader className='card-no-border'>
           <div className='header-top'>
@@ -19,19 +22,19 @@ const ActivityCard = () => {
         </CardHeader>
         <CardBody className='pt-0'>
           <UL>
-            {ActivityData.map((item, i) => (
+            {data.map((item, i) => (
               <LI key={i} attrLI={{ className: 'd-flex' }}>
-                <div className={`activity-dot-${item.color}`} />
+                <div className={`activity-dot-danger`} />
                 <div className='w-100 ms-3'>
                   <P attrPara={{ className: 'd-flex justify-content-between mb-2' }}>
-                    <span className='date-content light-background'>{item.subTitle}</span>
-                    <span>{item.time}</span>
+                    <span className='date-content light-background'>{item.name}</span>
+                    <span>{item.price}</span>
                   </P>
                   <H6>
-                    {item.title}
+                    {item.business_name}
                     <span className='dot-notification' />
                   </H6>
-                  <p className='f-light'>{item.dis}</p>
+                  <p className='f-light'>{item.about}</p>
                 </div>
               </LI>
             ))}

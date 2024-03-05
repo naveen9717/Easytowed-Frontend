@@ -1,14 +1,18 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardHeader, Col, Table } from 'reactstrap';
 import { Image, H5, P } from '../../../AbstractElements';
 import { DailyDropdown, RecentSalesTitle } from '../../../Constant';
 import { RecentSalesData } from '../../../Data/DefaultDashboard';
 import DropdownCommon from '../../Common/Dropdown';
+import axios from "axios";
 
-const RecentSales = () => {
+const RecentSales = ({data}) => {
+
+
+  
   return (
-    <Col xxl='4' md='6' className='appointment-sec box-col-6'>
+    <Col xxl='6' md='6' className='appointment-sec box-col-6'>
       <div className='appointment'>
         <Card>
           <CardHeader className='card-no-border'>
@@ -23,19 +27,19 @@ const RecentSales = () => {
             <div className='appointment-table'>
               <Table borderless responsive>
                 <tbody>
-                  {RecentSalesData.map((item, i) => (
+                  {data?.map((item, i) => (
                     <tr key={i}>
                       <td>
-                        <Image attrImage={{ className: 'img-fluid img-40 rounded-circle', src: require(`../../../assets/images/dashboard/user/${item.image}`), alt: 'user' }} />
+                        <Image attrImage={{ className: 'img-fluid img-40 rounded-circle', src: `${JSON.parse(item.gallery)[0]}`, alt: `${item.name}` }} />
                       </td>
                       <td className='img-content-box'>
                         <Link className='d-block f-w-500' to={`${process.env.PUBLIC_URL}/app/users/profile`}>
-                          {item.title}
+                          {item.name}
                         </Link>
-                        <span className='f-light'>{item.subTitle}</span>
+                        <span className='f-light'>{item.business_name}</span>
                       </td>
                       <td className='text-end'>
-                        <P attrPara={{ className: 'm-0 font-success' }}>{item.badge}</P>
+                        <P attrPara={{ className: 'm-0 font-success' }}>{item.number}</P>
                       </td>
                     </tr>
                   ))}

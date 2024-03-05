@@ -24,7 +24,6 @@ const WidgetsWrapper = () => {
     });
   }, []);
 
-  console.log('Total Venues',venues.length)
 
   const WidgetsData = {
     title: 'Photograhpers',

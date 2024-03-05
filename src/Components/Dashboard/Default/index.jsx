@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React,{useEffect,useState,Fragment} from 'react';
 import { Container, Row } from "reactstrap";
 import { Breadcrumbs } from "../../../AbstractElements";
 
@@ -12,8 +12,22 @@ import TimelineCard from "./TimelineCard";
 import PreAccountCard from "./PreAccountCard";
 import TotalUserAndFollower from "./TotalUserAndFollower";
 import PaperNote from "./PaperNote";
+import axios from "axios";
 
 const Dashboard = () => {
+
+  const [mockDataTeam, setmockDataTeam] = React.useState([]);
+  const [RecentData, setRecentData] = React.useState([]);
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/photographers/findall`).then((response) => {
+      setmockDataTeam(Object.values(response.data));
+    });
+    axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/venues/findall`).then((response) => {
+      setRecentData(Object.values(response.data));
+    });
+  }, []);
+
+  console.log('recentdata',RecentData)
   return (
     <Fragment>
       <Breadcrumbs mainTitle="Dashboard" parent="Dashboard" title="Home" />
@@ -21,9 +35,8 @@ const Dashboard = () => {
         <Row className="widget-grid">
           <GreetingCard />
           <WidgetsWrapper />
-          <ActivityCard />
-          <RecentSales />
-          <TimelineCard />
+          <ActivityCard data={mockDataTeam}/>
+          <RecentSales data={RecentData}/>
         </Row>
       </Container>
     </Fragment>

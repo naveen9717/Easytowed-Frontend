@@ -30,28 +30,28 @@ const ClientNameClass = ({ register, errors }) => {
                 <Col sm="3">
                     <FormGroup>
                         <Label>Wedding Price Veg</Label>
-                        <input className="form-control" type="text" name="wedding_price_veg" placeholder="Add Wedding Price Veg" {...register('wedding_price_veg')} />
+                        <input className="form-control" type="text" name="wedding_price_veg" placeholder="Add Wedding Price Veg" {...register('wedding_price_veg',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.wedding_price_veg && 'Price is required'}</span>
                     </FormGroup>
                 </Col>
                 <Col sm="3">
                     <FormGroup>
                         <Label>Wedding Price Non Veg</Label>
-                        <input className="form-control" type="number" name="wedding_price_nonveg" placeholder="Add Wedding Price Non Veg" {...register('wedding_price_nonveg')} />
+                        <input className="form-control" type="number" name="wedding_price_nonveg" placeholder="Add Wedding Price Non Veg" {...register('wedding_price_nonveg',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.wedding_price_nonveg && 'Price is required'}</span>
                     </FormGroup>
                 </Col>
                 <Col sm="2">
                     <FormGroup>
                         <Label>Engagement Price Veg</Label>
-                        <input className="form-control" type="text" name="engagement_price_veg" placeholder="Add Engage. Price Veg" {...register('engagement_price_veg')} />
+                        <input className="form-control" type="text" name="engagement_price_veg" placeholder="Add Engage. Price Veg" {...register('engagement_price_veg',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.engagement_price_veg && 'Price is required'}</span>
                     </FormGroup>
                 </Col>
                 <Col sm="2">
                     <FormGroup>
                         <Label>Engagement Price Non Veg</Label>
-                        <input className="form-control" type="text" name="engagement_price_nonveg" placeholder="Add Engage. Price NonVeg" {...register('engagement_price_nonveg')} />
+                        <input className="form-control" type="text" name="engagement_price_nonveg" placeholder="Add Engage. Price NonVeg" {...register('engagement_price_nonveg',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.engagement_price_nonveg && 'Price is required'}</span>
                     </FormGroup>
                 </Col>

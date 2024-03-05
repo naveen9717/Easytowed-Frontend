@@ -1,12 +1,20 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import ReactApexChart from 'react-apexcharts';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import { H5, UL, LI, H4 } from '../../../AbstractElements';
 import { Cancelled,  Delivered, LastMonth, profit, profit2, RecentOrdersTitle, WeeklyMonDropdown } from '../../../Constant';
 import { RecentOrderChart } from '../../../Data/DefaultDashboard/Chart';
 import DropdownCommon from '../../Common/Dropdown';
+import axios from "axios";
 
 const RecentOrders = () => {
+  const [mockDataTeam, setmockDataTeam] = React.useState([]);
+
+  useEffect(() => {
+    axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/venues/findall`).then((response) => {
+      setmockDataTeam(Object.values(response.data));
+    });
+  }, []);
   return (
     <Col xxl='4' xl='7' md='6' sm='5' className='box-col-6'>
       <Card className='height-equal'>

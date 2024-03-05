@@ -30,7 +30,7 @@ const DataTableComponent = () => {
         axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/photographers/findall`).then((response) => {
           setmockDataTeam(Object.values(response.data));
         });
-      }, [mockDataTeam]);
+      }, []);
 
     const handleDelete = () => {
         if (window.confirm(`Are you sure you want to delete:\r ${selectedRows.map(r => r.title)}?`)) {
@@ -39,10 +39,13 @@ const DataTableComponent = () => {
             setSelectedRows('');
         }
     };
+
+   console.log('gallery',mockDataTeam)
+
    const tableColumns = [
         {
             name: 'Name',
-            selector: row => <Media className='d-flex'><Image attrImage={{ className: 'rounded-circle img-30 me-3', src: `${JSON.parse(row.gallery)}`, alt: `${row.name}` }} />
+            selector: row => <Media className='d-flex'><Image attrImage={{ className: 'rounded-circle img-30 me-3', src: `${JSON.parse(row.gallery)[0]}`, alt: `${row.name}` }} />
                         <Media body className="align-self-center">
                              <div className='text-capitalize'>{row.name}</div>
                         </Media>

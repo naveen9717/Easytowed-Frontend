@@ -9,7 +9,7 @@ const EnterSomeDetailsClass = ({ register, errors }) => {
         <Col>
           <FormGroup>
             <Label>About Us Vendor</Label>
-            <textarea className='form-control' name='about' placeholder="Tell Something about...." rows='3' {...register('about')} />
+            <textarea className='form-control' name='about' placeholder="Tell Something about...." rows='3' {...register('about',{required:true})} />
             <span style={{ color: 'red' }}>{errors.about && 'Some Details is required'}</span>
           </FormGroup>
         </Col>

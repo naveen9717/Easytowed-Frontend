@@ -10,7 +10,7 @@ const IssueClass = ({ register,errors  }) => {
                 <Col sm="4">
                     <FormGroup>
                         <Label>Business Name</Label>
-                        <input className="form-control" type="text" name="business_name" placeholder="Business Name" {...register('business_name')} />
+                        <input className="form-control" type="text" name="business_name" placeholder="Business Name" {...register('business_name',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.business_name && 'Business Name is required'}</span>
                     </FormGroup>
                 </Col>
@@ -18,7 +18,7 @@ const IssueClass = ({ register,errors  }) => {
                 <Col sm="4">
                 <FormGroup>
                         <Label>Address</Label>
-                        <input className="form-control" type="text" name="address" placeholder="Add Address" {...register('address')} />
+                        <input className="form-control" type="text" name="address" placeholder="Add Address" {...register('address',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.address && 'Address is required'}</span>
 
                     </FormGroup>
@@ -26,7 +26,7 @@ const IssueClass = ({ register,errors  }) => {
                 <Col sm="4">
                 <FormGroup>
                         <Label>Price</Label>
-                        <input className="form-control" type="text" name="price" placeholder="Add Price" {...register('price')} />
+                        <input className="form-control" type="text" name="price" placeholder="Add Price" {...register('price',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.price && 'Price is required'}</span>
 
                     </FormGroup>

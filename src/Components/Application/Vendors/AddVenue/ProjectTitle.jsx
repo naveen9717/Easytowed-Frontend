@@ -8,14 +8,14 @@ const ProjectTitleClass = ({ register, errors }) => {
             <Col sm="4">
                    <FormGroup>
                         <Label>Name</Label>
-                        <input className="form-control" type="text" name="name" placeholder="Name" {...register('name')} />
+                        <input className="form-control" type="text" name="name" placeholder="Name" {...register('name',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.name && 'Name is required'}</span>
                     </FormGroup>
                 </Col>
                 <Col sm="4">
                 <FormGroup>
                         <Label>Email</Label>
-                        <input className="form-control" type="email" name="email" placeholder="Add Email" {...register('email')} />
+                        <input className="form-control" type="email" name="email" placeholder="Add Email" {...register('email',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.email && 'Email is required'}</span>
                     </FormGroup>
                     
@@ -23,7 +23,7 @@ const ProjectTitleClass = ({ register, errors }) => {
                 <Col sm="4">
                     <FormGroup>
                         <Label>Mobile Number</Label>
-                        <input className="form-control" type="text" name="number" placeholder="Add Phone Number" {...register('phone')} />
+                        <input className="form-control" type="text" name="number" placeholder="Add Phone Number" {...register('phone',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.phone && 'Mobile No is required'}</span>
                     </FormGroup>
                 </Col>

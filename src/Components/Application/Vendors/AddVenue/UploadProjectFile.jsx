@@ -57,7 +57,7 @@ const UploadProjectFileClass = ({ handleVenueImage,control }) => {
                                     <div className="dz-message needsclick">
                                       <DropzoneArea
                                           // initialFiles={["http://res.cloudinary.com/dgzkc2vjv/image/upload/v1707396746/Easytowed/Venues/thr0darewbgeqpqo3yb0.png","http://res.cloudinary.com/dgzkc2vjv/image/upload/v1707396747/Easytowed/Venues/nrize4r48l9b3tyfqhcr.jpg"]}
-                                         
+                                          filesLimit={20}
                                           onChange={(file) => setFileInfos(file)}
                                         />
                                     </div> 

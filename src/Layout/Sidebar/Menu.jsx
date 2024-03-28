@@ -49,6 +49,22 @@ export const MENUITEMS = [
     ],
   },
   {
+    menutitle: "Destination Wedding",
+    menucontent: "Ready to use Apps",
+    Items: [
+      {
+        title: "All Destination Wedding",
+        icon: "project",
+        type: "sub",
+        active: true,
+        children: [
+          { path: `${process.env.PUBLIC_URL}/destination-list`, type: "link", title: "Destination-List" },
+          { path: `${process.env.PUBLIC_URL}/vendors/add-destination`, type: "link", title: "Create New" },
+        ],
+      },
+    ],
+  },
+  {
     menutitle: "Account",
     menucontent: "Ready to use Apps",
     Items: [

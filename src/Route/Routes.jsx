@@ -97,6 +97,9 @@ import AddPhotographer from "../Components/Application/Vendors/AddPhotographer";
 import Project from "../Components/Application/Vendors/Project";
 import PhotographerList from "../Components/Application/Vendors/PhotographerList";
 import PhotographerEdit from "../Components/Application/Vendors/PhotographerEdit";
+import AddDestination from "../Components/Application/Vendors/AddDestination";
+import DestinationList from "../Components/Application/Vendors/DestinationList";
+import DestinationEdit from "../Components/Application/Vendors/DestinationEdit";
 import Chat from "../Components/Application/Chat/ChatApp";
 import VideoChat from "../Components/Application/Chat/VideoChat";
 
@@ -198,9 +201,11 @@ export const routes = [
   { path: `${process.env.PUBLIC_URL}/photographer-list`, Component: <PhotographerList /> },
   { path: `${process.env.PUBLIC_URL}/vendors/profile/:userId/`, Component: <PhotographerEdit /> },
   { path: `${process.env.PUBLIC_URL}/vendors/add-photographer`, Component: <AddPhotographer /> },
-
   { path: `${process.env.PUBLIC_URL}/users/profile`, Component: <UsersProfileContain /> },
   { path: `${process.env.PUBLIC_URL}/users/edit`, Component: <UsersEditContain /> },
+  { path: `${process.env.PUBLIC_URL}/destination-list`, Component: <DestinationList /> },
+  { path: `${process.env.PUBLIC_URL}/vendors/add-destination`, Component: <AddDestination /> },
+  { path: `${process.env.PUBLIC_URL}/destination/profile/:userId/`, Component: <DestinationEdit /> },
 
   { path: `${process.env.PUBLIC_URL}/dashboard/e-commerce/:layout`, Component: <Ecommerce /> },
   { path: `${process.env.PUBLIC_URL}/dashboard/online-course/:layout`, Component: <OnlineCourse /> },

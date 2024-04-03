@@ -7,17 +7,15 @@ import { RecentSalesData } from '../../../Data/DefaultDashboard';
 import DropdownCommon from '../../Common/Dropdown';
 import axios from "axios";
 
-const RecentSales = ({data}) => {
+const RecentDestination = ({data}) => {
 
-
-  
   return (
     <Col xxl='4' md='6' className='appointment-sec box-col-6'>
       <div className='appointment'>
         <Card>
           <CardHeader className='card-no-border'>
             <div className='header-top'>
-              <H5 attrH5={{ className: 'm-0' }}>Recent Venues</H5>
+              <H5 attrH5={{ className: 'm-0' }}>Recent Destination</H5>
               <div className='card-header-right-icon'>
                 <DropdownCommon icon={false} options={DailyDropdown} btn={{ caret: true }} />
               </div>
@@ -53,4 +51,4 @@ const RecentSales = ({data}) => {
   );
 };
 
-export default RecentSales;
+export default RecentDestination;

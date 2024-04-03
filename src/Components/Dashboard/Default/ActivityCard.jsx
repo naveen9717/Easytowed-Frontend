@@ -10,7 +10,7 @@ const ActivityCard = ({data}) => {
 
 
   return (
-    <Col xxl='6' xl='5' md='6' sm='7' className='notification box-col-6'>
+    <Col xxl='4' xl='5' md='6' sm='7' className='notification box-col-6'>
       <Card className='height-equal'>
         <CardHeader className='card-no-border'>
           <div className='header-top'>
@@ -22,7 +22,7 @@ const ActivityCard = ({data}) => {
         </CardHeader>
         <CardBody className='pt-0'>
           <UL>
-            {data.map((item, i) => (
+            {data.slice(0, 3).map((item, i) => (
               <LI key={i} attrLI={{ className: 'd-flex' }}>
                 <div className={`activity-dot-danger`} />
                 <div className='w-100 ms-3'>

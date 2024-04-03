@@ -25,7 +25,7 @@ const IssueClass = ({ register,errors  }) => {
                 </Col>
                 <Col sm="4">
                 <FormGroup>
-                        <Label>Price Per Room</Label>
+                        <Label>2 Days package for 150 people including mehendi+ sangeet + haldi + wedding</Label>
                         <input className="form-control" type="text" name="price" placeholder="Add Price" {...register('price',{required:true})} />
                         <span style={{ color: 'red' }}>{errors.price && 'Price is required'}</span>
 

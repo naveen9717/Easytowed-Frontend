@@ -43,6 +43,12 @@ const DataTableComponent = () => {
    console.log('gallery',mockDataTeam)
 
    const tableColumns = [
+       {
+        name: 'Vendor ID',
+        selector: row =>  <span className='badge badge-light-info'>EWDW{row.id}</span>,
+        sortable: true,
+        center: true,
+        },
         {
             name: 'Name',
             selector: row => <Media className='d-flex'><Image attrImage={{ className: 'rounded-circle img-30 me-3', src: `${JSON.parse(row.gallery)[0]}`, alt: `${row.name}` }} />

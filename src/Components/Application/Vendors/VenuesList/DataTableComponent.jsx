@@ -43,6 +43,12 @@ const DataTableComponent = () => {
     };
    const tableColumns = [
         {
+         name: 'Vendor ID',
+         selector: row =>  <span className='badge badge-light-info'>EWV{row.id}</span>,
+         sortable: true,
+         center: true,
+        },
+        {
             name: 'Name',
             selector: row => <Media className='d-flex'><Image attrImage={{ className: 'rounded-circle img-30 me-3', src: `${JSON.parse(row.gallery)[0]}`, alt: `${row.name}` }} />
                         <Media body className="align-self-center">
@@ -67,18 +73,6 @@ const DataTableComponent = () => {
         {
             name: 'Email',
             selector: row => `${row.email}`,
-            sortable: true,
-            center: true,
-        },
-        {
-            name: 'Guest Range',
-            selector: row =>  <span className='badge badge-light-info'>{row.guest_range}</span>,
-            sortable: true,
-            center: true,
-        },
-        {
-            name: 'Address',
-            selector: row => <span className='text-capitalize'>{row.address}</span>,
             sortable: true,
             center: true,
         },

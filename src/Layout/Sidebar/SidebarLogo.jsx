@@ -18,11 +18,11 @@ const SidebarLogo = () => {
     <div className='logo-wrapper'>
       {layout1 !== 'compact-wrapper dark-sidebar' && layout1 !== 'compact-wrapper color-sidebar' && mixLayout ? (
         <Link to={`${process.env.PUBLIC_URL}/dashboard/default/`}>
-          <Image attrImage={{ className: 'img-fluid d-inline w-25', src: `${CubaIcon}`, alt: '' }} />
+          <Image attrImage={{ className: 'img-fluid d-inline w-25', src: `${require('../../assets/images/logo/logo-icon.png')}`, alt: '' }} />
         </Link>
       ) : (
         <Link to={`${process.env.PUBLIC_URL}/dashboard/default/`}>
-          <Image attrImage={{ className: 'img-fluid d-inline', src: `${require('../../assets/images/logo/logo_dark.png')}`, alt: '' }} />
+          <Image attrImage={{ className: 'img-fluid d-inline w-25', src: `${require('../../assets/images/logo/logo-icon.png')}`, alt: '' }} />
         </Link>
       )}
       <div className='back-btn' onClick={() => openCloseSidebar()}>

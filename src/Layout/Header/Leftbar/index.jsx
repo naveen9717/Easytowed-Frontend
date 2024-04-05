@@ -54,7 +54,7 @@ const Leftbar = () => {
             <Image
               attrImage={{
                 className: "img-fluid for-light",
-                src: `${require("../../../assets/images/logo/logo.png")}`,
+                src: `${require("../../../assets/images/logo/logo-icon.png")}`,
                 alt: "",
               }}
             />

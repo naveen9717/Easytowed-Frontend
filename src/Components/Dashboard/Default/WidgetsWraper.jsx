@@ -9,6 +9,7 @@ const WidgetsWrapper = () => {
   const [venues, setVenues] = React.useState([]);
   const [photo, setPhoto] = React.useState([]);
   const [users, setUsers] = React.useState([]);
+  const [destination, setDestination] = React.useState([]);
 
 
 
@@ -21,6 +22,9 @@ const WidgetsWrapper = () => {
     });
     axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/users/findall`).then((response) => {
       setUsers(Object.values(response.data));
+    });
+    axios.get(`${process.env.REACT_APP_NODE_BACKEND_URL}/api/destination/findall`).then((response) => {
+      setDestination(Object.values(response.data));
     });
   }, []);
 
@@ -50,7 +54,7 @@ const WidgetsData2 = {
  const WidgetsData4 = {
     title: 'Locations',
     gros: 70,
-    total: 100,
+    total: destination.length,
     color: 'success',
     icon: 'rate',
   };

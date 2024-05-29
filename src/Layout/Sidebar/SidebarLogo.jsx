@@ -17,11 +17,11 @@ const SidebarLogo = () => {
   return (
     <div className='logo-wrapper'>
       {layout1 !== 'compact-wrapper dark-sidebar' && layout1 !== 'compact-wrapper color-sidebar' && mixLayout ? (
-        <Link to={`${process.env.PUBLIC_URL}/dashboard/default/`}>
+        <Link to={`${process.env.PUBLIC_URL}/dashboard/`}>
           <Image attrImage={{ className: 'img-fluid d-inline w-25', src: `${require('../../assets/images/logo/logo-icon.png')}`, alt: '' }} />
         </Link>
       ) : (
-        <Link to={`${process.env.PUBLIC_URL}/dashboard/default/`}>
+        <Link to={`${process.env.PUBLIC_URL}/dashboard/`}>
           <Image attrImage={{ className: 'img-fluid d-inline w-25', src: `${require('../../assets/images/logo/logo-icon.png')}`, alt: '' }} />
         </Link>
       )}
